@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="display_box">
+                    <input type="text" name="display_box">
+                </div>
+                <!-- 1st row -->
+                <div>
+                    <input type="button" value="AC" onclick="display_box.value ='' ">
+                    <input type="button" value="DEL" onclick="display_box.value = display_box.value.toString(0).slice(0, -1)">
+                    <input type="button" value="." onclick="display_box.value+='.'">
+                    <input type="button" value="/" onclick="display_box.value+='/'">
+                </div>
+
+                <div>
+                    <!-- 2nd row -->
+                    <input type="button" value="7" onclick="display_box.value+='7'">
+                    <input type="button" value="8" onclick="display_box.value+='8'">
+                    <input type="button" value="9" onclick="display_box.value+='9'">
+                    <input type="button" value="*" onclick="display_box.value+='*'">
+                </div>
+
+                <div>
+                    <!-- 3rd row -->
+                    <input type="button" value="4" onclick="display_box.value+='4'">
+                    <input type="button" value="5" onclick="display_box.value+='5'">
+                    <input type="button" value="6" onclick="display_box.value+='6'">
+                    <input type="button" value="-" onclick="display_box.value+='-'">
+                </div>
+
+                <div>
+                    <!-- 4th row -->
+                    <input type="button" value="1" onclick="display_box.value+='1'">
+                    <input type="button" value="2" onclick="display_box.value+='2'">
+                    <input type="button" value="3" onclick="display_box.value+='3'">
+                    <input type="button" value="+" onclick="display_box.value+='+'">
+                </div>
+
+                <div>
+                    <!-- 5th row -->
+                    <input type="button" value="00" onclick="display_box.value+='00'">
+                    <input type="button" value="0" onclick="display_box.value+='0'">
+                    <input type="button" value="=" onclick = "display_box.value = eval(display_box.value)"class="equal">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
